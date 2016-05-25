@@ -1,0 +1,356 @@
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3366CC"
+    android:orientation="vertical"
+    tools:context="${relativePackage}.${activityClass}" xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/mmtitle_bg_alpha" >
+
+        <Button
+            android:id="@+id/button_back"
+            android:layout_width="75.0dip"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="2dip"
+            android:background="@drawable/mm_title_back_btn"
+            android:text="返回"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/TroubleShootingbill_title1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button_back"
+            android:layout_alignBottom="@+id/button_back"
+            android:layout_centerHorizontal="true"
+            android:gravity="center_vertical"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_multi_function_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dip"
+            android:background="@drawable/mm_title_right_btn"
+            android:minWidth="70dip"
+            android:src="@drawable/mm_title_btn_menu_normal"
+            android:text="提交"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/buttoin_multi_function_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/button_multi_function_1"
+            android:background="@drawable/mm_title_right_btn"
+            android:minWidth="70dip"
+            android:src="@drawable/mm_title_btn_menu_normal"
+            android:text="删除"
+            android:textColor="#ffffff" />
+
+        <TextView
+            android:id="@+id/TroubleShootingbill_title2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/button_back"
+            android:layout_alignBottom="@+id/button_back"
+            android:layout_toLeftOf="@+id/buttoin_multi_function_2"
+            android:layout_toRightOf="@+id/button_back"
+            android:gravity="center_vertical|center_horizontal"
+            android:text=""
+            android:textColor="@android:color/white"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/sv_Tsb"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="报修单号："
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvBillID"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textSize="@dimen/TSB_Text_Size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="报修人员："
+                        android:textSize="@dimen/TSB_Text_Size" />
+
+                    <TextView
+                        android:id="@+id/tvUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/TSB_Text_Size" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="报修日期："
+                        android:textSize="@dimen/TSB_Text_Size" />
+
+                    <TextView
+                        android:id="@+id/tvShootingDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="right"
+                        android:textSize="@dimen/TSB_Text_Size" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="故障类型："
+                                android:textSize="@dimen/TSB_Text_Size" />
+
+                            <Spinner
+                                android:id="@+id/spTroubleType"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="故障位置："
+                                android:textSize="@dimen/TSB_Text_Size" />
+
+                            <Spinner
+                                android:id="@+id/spTroubleArea"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="责权部门："
+                                android:textSize="@dimen/TSB_Text_Size" />
+
+                            <TextView
+                                android:id="@+id/tvRepairDeptName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="@dimen/TSB_Text_Size" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:gravity="center_vertical"
+                                android:text="维  修  人："
+                                android:textSize="@dimen/TSB_Text_Size" />
+
+                            <Spinner
+                                android:id="@+id/spFinRepairName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="5dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:id="@+id/layout_Image"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical" >
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content" >
+
+                                <Button
+                                    android:id="@+id/btn_CodeScan"
+                                    android:layout_width="60dp"
+                                    android:layout_height="40dp"
+                                    android:text="扫描" />
+
+                                <Button
+                                    android:id="@+id/btn_ImpageUpload"
+                                    android:layout_width="60dp"
+                                    android:layout_height="40dp"
+                                    android:text="上传" />
+                            </LinearLayout>
+
+                            <ProgressBar
+                                android:id="@+id/pb_ImageUpload"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp" />
+                        </LinearLayout>
+
+                        <ImageView
+                            android:id="@+id/iv_trouble_image"
+                            android:layout_width="120dp"
+                            android:layout_height="120dp"
+                            android:scaleType="fitXY"
+                           />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="维修评价："
+                        android:textSize="@dimen/TSB_Text_Size" />
+
+                    <RatingBar
+                        android:id="@+id/rB_TSB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="故障描述："
+                        android:textSize="@dimen/TSB_Text_Size" />
+
+                    <EditText
+                        android:id="@+id/etTroubleDetail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:inputType="textMultiLine"
+                        android:minLines="2"
+                        android:paddingBottom="12dip"
+                        android:paddingLeft="8dip"
+                        android:paddingRight="8dip"
+                        android:paddingTop="12dip" >
+
+                        <requestFocus />
+                    </EditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_tsb_apply_remark"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="审核意见："
+                        android:textSize="@dimen/TSB_Text_Size" />
+
+                    <EditText
+                        android:id="@+id/et_apply_remark"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ems="10"
+                        android:inputType="textMultiLine"
+                        android:minLines="1"
+                        android:paddingBottom="12dip"
+                        android:paddingLeft="8dip"
+                        android:paddingRight="8dip"
+                        android:paddingTop="12dip" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.mimp.android.ch0.WorkFlowListView
+                android:id="@+id/lvChangeLog"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </com.mimp.android.ch0.WorkFlowListView>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

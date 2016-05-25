@@ -1,0 +1,12 @@
+eclipse.preferences.version=1
+encoding//src/com/mimp/android/bean/User.java=UTF-8
+encoding//src/com/mimp/android/ch0/CaptureActivity.java=UTF-8
+encoding//src/com/mimp/android/ch0/Constants.java=UTF-8
+encoding//src/com/mimp/android/ch0/MainTab04Fragment.java=UTF-8
+encoding//src/com/mimp/android/ch0/SelectPicActivity.java=UTF-8
+encoding//src/com/mimp/android/ch0/XListViewHeader.java=UTF-8
+encoding//src/com/mimp/android/dialog/titlemenu/TitlePopup.java=UTF-8
+encoding//src/com/mimp/zxing/decode=UTF-8
+encoding//src/com/mimp/zxing/utils=UTF-8
+encoding/<project>=GBK
+separateDerivedEncodings=true
